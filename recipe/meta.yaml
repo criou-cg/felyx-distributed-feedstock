@@ -15,7 +15,7 @@ build:
   script_env:
     - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - felyx-mmdb = felyx_distributed.main.run_mmdb:felyx_mmdb
@@ -31,6 +31,7 @@ requirements:
     - pip
     - felyx-processor >=2.5.8,<3.0.0
     - jobard-client >=1.5.5,<2.0.0
+    - pydantic-settings >=2.4.0,<3.0.0
  
 test:
   requires:
